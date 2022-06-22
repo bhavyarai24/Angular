@@ -1,0 +1,61 @@
+<div class="container"
+     fxLayout="row"
+     fxLayout.sm="column"
+     fxLayout.xs="column"
+     fxLayoutAlign.gt-md="space-around center"
+     fxLayoutGap="10px"
+     max-height="150"
+     >
+
+<mat-card *ngIf="dish" class="example-card" [routerLink]="['/dishdetail', dish.id]">
+  <mat-card-header >
+    <mat-card-title >
+      <h3>
+        <strong>
+          {{dish.name | uppercase}}
+        </strong>
+      </h3>
+    </mat-card-title>
+  </mat-card-header>
+  <img mat-card-image height="500px" src={{dish.image_link}} alt={{dish.name}}>
+  <mat-card-content >
+    <p>{{dish.description}}
+    </p>
+  </mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="promotion" class="example-card" [routerLink]="['/dishdetail', dish.id]">
+  <mat-card-header>
+    <mat-card-title>
+      <h3>
+        <strong>
+          {{promotion.name | uppercase}}
+        </strong>
+      </h3>
+    </mat-card-title>
+  </mat-card-header>
+  <img mat-card-image height="500px" src={{promotion.image_link}} alt={{promotion.name}}>
+  <mat-card-content>
+    <p>{{promotion.description}}
+    </p>
+  </mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="promotion" class="example-card" [routerLink]="['/dishdetail', dish.id]">
+  <mat-card-header>
+    <mat-card-title>
+      <h3>
+        <strong>
+          {{promotion.name | uppercase}}
+        </strong>
+      </h3>
+    </mat-card-title>
+  </mat-card-header>
+  <img mat-card-image height="500px" src={{promotion.image_link}} alt={{promotion.name}}>
+  <mat-card-content>
+    <p>{{promotion.description}}
+    </p>
+  </mat-card-content>
+</mat-card>
+
+</div>

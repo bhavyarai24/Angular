@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+  <span>
+    <p>
+      <img src="/assets/images/logo.png" height=30 width=41>
+      <strong>
+        ConFusion
+      </strong>
+    </p>
+  </span>
+  <span class="flex-spacer"></span>
+  <div class="icon-bar">
+    <a mat-button routerLink='/home' routerLinkActive="active"><span class="fa fa-home fa-lg"></span> Home</a>
+    <a mat-button routerLink='/about' routerLinkActive="active"><span class="fa fa-info fa-lg"></span> About</a>
+    <a mat-button routerLink='/menu' routerLinkActive="active"><span class="fa fa-list fa-lg"></span> Menu</a>
+    <a mat-button routerLink='/cart' routerLinkActive="active"><span class="fa fa-shopping-cart"></span> Cart</a>
+    <a mat-button (click)="openLoginForm()"><span class="fa fa-sign-in fa-lg"></span> Login</a>
+  </div>
+</mat-toolbar>
+
+
+<div class="jumbotron"
+    fxLayout="row"
+    fxLayout.sm="column" 
+    fxLayout.xs="column" 
+    fxLayoutAlign.xs="start center"
+    fxLayoutAlign.sm="start center" 
+    fxLayoutAlign.gt-sm="center center" 
+    fxLayoutGap="10px">
+
+  <div fxFlex fxFlex.gt-sm="100%">
+    <h1>Restaurant ConFusion</h1>
+    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations
+      will tickle your culinary senses!</p>
+  </div>
+  <div fxFlex fxFlex.gt-sm="10%">
+    <img src="/assets/images/logo.png" alt="Logo">
+  </div>
+</div>

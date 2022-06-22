@@ -1,0 +1,16 @@
+.example-card {
+    max-width: 400px;
+    max-height: 700px;
+  }
+  .example-card:hover,.example-card:active{
+
+    font-size: 120%;
+    cursor: pointer;
+    box-shadow: 0 0 11px rgba(31, 84, 199, 0.404); 
+}
+.header-card{
+    border-width: 100cm;
+    border-color:rgb(42, 85, 165);
+}
+  
+  

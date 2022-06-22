@@ -1,0 +1,60 @@
+
+<div class="container"
+fxLayout="column"
+fxLayoutGap="10px">
+<div fxFlex>
+<table style="width: 100%;">
+ <tr>
+   <td>
+     <h2>Cart</h2>
+   </td>
+   <td>
+     <div>
+       <form class="example" action="/action_page.php" style="max-width:200px;float: right;">
+         <input type="text" placeholder="Search.." name="search" [(ngModel)]="searchedTerm" >
+         <button type="button" [routerLink]="['/search2',searchedTerm]" routerLinkActive="active"><i class="fa fa-search"></i></button>
+       </form>
+     </div>
+   </td>
+ </tr>
+</table>
+<hr>
+</div>
+  <div *ngFor="let dish of cartitem">
+    <mat-card class="example-card" class="menu" >
+      <table cellspacing="10px">
+        <tr>
+          <td [routerLink]="['/dishdetail', dish.id]">
+            <img aling="left" height="150px" src={{dish.image_link}} alt={{dish.name}}>
+          </td>
+          <td>
+            <table cellspacing="10px">
+              <th>
+                {{dish.name | uppercase}}
+              </th>
+              <tr>
+                Price: {{dish.price}}
+              </tr>
+              <tr>
+                <td>
+                  Quantity: {{dish.count}} 
+                </td>
+              </tr>
+              <tr>
+                <div>
+                  <button (click)="addtocart(dish.id)">+</button>
+                  <button (click)="removefromcart(dish.id)">-</button>
+                </div>
+              </tr>
+              <tr>
+                <button (click)="remove(dish.id)">Remove Item</button>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </mat-card>
+  </div>
+</div>
+
+

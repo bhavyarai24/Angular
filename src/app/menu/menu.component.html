@@ -1,0 +1,68 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+  <div fxFlex>
+    <table style="width: 100%;">
+      <tr>
+        <td>
+          <h2>Menu</h2>
+        </td>
+        <td>
+          <div>
+            <form class="example" action="/action_page.php" style="max-width:200px;float: right;">
+              <input type="text" placeholder="Search.." name="search" [(ngModel)]="searchedTerm" >
+              <button type="button" [routerLink]="['/search',searchedTerm]" routerLinkActive="active"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <hr>
+  </div>
+  <mat-grid-list cols="3" rowHeight="250px" gutterSize="80px" >
+    <mat-grid-tile *ngFor="let dish of dishes">
+      <mat-card class="example-card" class="menu" [routerLink]="['/dishdetail', dish.id]">
+        <mat-card-header>
+          <mat-card-title>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <table cellspacing="10" class="menu1">
+            <tr>
+              <td>
+                <img aling="left" height="200px" src={{dish.image_link}} alt={{dish.name}}>
+              </td>
+              <td>
+                <table cellspacing="10">
+                  <tr>
+                    Type: {{dish.type}}
+                  </tr>
+                  <tr>
+                    cuisine: {{dish.cuisine}}
+                  </tr>
+                  <tr>
+                    Price: {{dish.price}}
+                  </tr>
+                  <tr>
+                    Rating: {{dish.rating}}
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </mat-card-content>
+      </mat-card>
+      <mat-grid-tile-footer [style.background]="'#6664f7'">
+        <div>
+          {{dish.name | uppercase}}
+        </div>
+        <span class="flex-spacer"></span>
+        <div>
+          <button (click)="addtocart(dish.id)">add to cart</button>
+        </div>
+      </mat-grid-tile-footer>
+    </mat-grid-tile> 
+  </mat-grid-list> 
+</div>
+
+

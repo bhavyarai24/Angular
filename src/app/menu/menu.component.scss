@@ -1,0 +1,79 @@
+$background-dark: #3b5fc4;
+
+.container{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.footer{
+    background-color: $background-dark;
+}
+
+.temp{
+  column-gap: 100px;
+}
+
+
+
+.home-card {
+    margin-left: 10px;
+}
+
+.tile-image {
+    width:100%;
+    height: auto;
+  }
+
+.menu:hover,.menu:active{
+
+    font-size: 120%;
+    cursor: pointer;
+    box-shadow: 0 0 11px rgba(31, 84, 199, 0.404); 
+}
+
+.menu1:hover{
+    font-size: 120%;
+    cursor: pointer;
+}
+
+
+
+.example-card {
+    max-width: 800px;
+    max-height: 700px;
+  }
+
+.example input[type=text] {
+    padding: 10px;
+    font-size: 10px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: $background-dark;
+    color: white;
+    font-size: 10px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    margin-left: -25px;
+  }
+  
+.example button:hover {
+    background: #0b7dda;
+  }
+  
+.example::after {
+    content: "";
+    clear: both;
+    align-items: flex-end;
+  }
+
+
+
